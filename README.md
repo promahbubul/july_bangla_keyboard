@@ -16,8 +16,8 @@
   <a href="docs/ROADMAP.md">Roadmap</a>
 </p>
 
-A free Bangla keyboard with the Bijoy-compatible layout, for **Windows** and **Android**,
-with Linux next. It has three modes:
+A free Bangla keyboard with the Bijoy-compatible layout, for **Windows**, **Android** and
+**Linux**. It has three modes:
 
 | Mode | Output |
 |---|---|
@@ -44,13 +44,13 @@ with Linux next. It has three modes:
 
 ## Status
 
-Version **0.4.2 (preview)**.
+Version **0.5.0 (preview)**.
 
 | Platform | State |
 |---|---|
 | Windows 10/11 | Preview: installer, status bar, tray, splash |
 | Android 7+ | Preview: on-screen keyboard and hardware keys |
-| Linux (Fcitx5, IBus) | Planned next ([plan](docs/PLATFORMS.md)) |
+| Linux (Ubuntu, Debian) | Preview: IBus engine, `.deb` with a Bangla font ([linux/README.md](linux/README.md)) |
 | macOS | Planned |
 
 The production gates are listed in [docs/RELEASE.md](docs/RELEASE.md).
@@ -62,6 +62,7 @@ src/engine/      shared C++20 engine: layout, composer, Unicode and Classic back
 src/tip/         Windows TSF text service (JulyTip.dll)
 src/app/         Windows companion: status bar, tray icon, splash (JulyBangla.exe)
 src/common/      shared Windows code (settings, mode visuals)
+linux/           Linux IBus engine and .deb package
 android/         Android keyboard (Kotlin + JNI bridge to src/engine)
 layouts/         Bijoy layout and the verified SutonnyMJ table (source of truth)
 tests/           unit, golden, fuzz and generator tests; TSF smoke test

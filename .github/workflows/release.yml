@@ -4,6 +4,7 @@
 # release attaches files with these exact names:
 #   JulyBanglaKeyboard-Setup.exe   Windows installer
 #   JulyBanglaKeyboard.apk         Android app (only when the signing secrets are set)
+#   JulyBanglaKeyboard-linux-amd64.deb  Linux (Ubuntu/Debian) package
 #
 # Android signing secrets (optional): ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD,
 # ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD. Without them no APK is attached, because an
@@ -90,9 +91,29 @@ jobs:
           path: dist/JulyBanglaKeyboard.apk
           if-no-files-found: error
 
+  linux:
+    name: Linux package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq libibus-1.0-dev ninja-build
+      - name: Build, test and package
+        run: |
+          cmake -S linux -B build-linux -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build-linux
+          ctest --test-dir build-linux --output-on-failure
+          cd build-linux && cpack --config CPackConfig.cmake
+          mkdir -p ../dist && cp JulyBanglaKeyboard-linux-amd64.deb ../dist/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: dist/JulyBanglaKeyboard-linux-amd64.deb
+          if-no-files-found: error
+
   publish:
     name: Publish release
-    needs: [windows, android]
+    needs: [windows, android, linux]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

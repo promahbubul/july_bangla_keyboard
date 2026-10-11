@@ -98,7 +98,8 @@ set(CPACK_PACKAGE_DESCRIPTION "Type Bangla with the Bijoy-compatible layout and 
 set(CPACK_DEBIAN_PACKAGE_SECTION "utils")
 set(CPACK_DEBIAN_PACKAGE_HOMEPAGE "https://julykeyboard.vercel.app/")
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "ibus")
+# A Bangla font comes with the keyboard (most desktops already have one of these).
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "ibus, fonts-noto-core | fonts-lohit-beng-bengali | fonts-beng")
 set(CPACK_DEBIAN_FILE_NAME "JulyBanglaKeyboard-linux-amd64.deb")
 set(CPACK_PACKAGING_INSTALL_PREFIX "/usr")
 set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "${CMAKE_CURRENT_SOURCE_DIR}/debian/postinst;${CMAKE_CURRENT_SOURCE_DIR}/debian/postrm")

@@ -4,6 +4,14 @@ All notable changes are listed here. Versions follow [SemVer](https://semver.org
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-11
+
+### Added
+- **Linux preview (Ubuntu, Debian).** An IBus engine with the same Bijoy typing, modes
+  and Ctrl+Alt+B switch, as `JulyBanglaKeyboard-linux-amd64.deb`. It installs a Bangla
+  font with it. Every release now includes the Linux package, and the website's Linux
+  button downloads it.
+
 ## [0.4.2] - 2026-10-11
 
 ### Added

@@ -9,7 +9,7 @@
   var PLATFORMS = {
     windows: { name: "Windows", url: LATEST + "JulyBanglaKeyboard-Setup.exe", meta: "Windows 10 ও 11 · ২.৮ MB" },
     android: { name: "Android", url: LATEST + "JulyBanglaKeyboard.apk", meta: "Android ৭ বা নতুন · ০.৬ MB" },
-    linux: { name: "Linux", url: null, meta: "শীঘ্রই আসছে" }
+    linux: { name: "Linux", url: LATEST + "JulyBanglaKeyboard-linux-amd64.deb", meta: "Ubuntu ২৪.০৪+ · ০.২ MB" }
   };
   var OTHER_NAMES = { mac: "macOS", ios: "iPhone ও iPad" };
 
@@ -37,7 +37,7 @@
       if (title) title.textContent = p.name + "-এর জন্য ডাউনলোড";
       if (sub) sub.textContent = p.meta;
     } else if (p || OTHER_NAMES[device]) {
-      // Linux, macOS, iPhone: not ready yet -> send to the page with every download.
+      // macOS, iPhone: not ready yet -> send to the page with every download.
       btn.href = "download.html";
       if (title) title.textContent = "সব ডাউনলোড দেখুন";
       if (sub) sub.textContent = (p ? p.name : OTHER_NAMES[device]) + " সংস্করণ শীঘ্রই আসছে";

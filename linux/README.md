@@ -10,10 +10,10 @@ It types the same text for the same keys as on Windows and Android.
   composition on Windows.
 - **Privacy:** no network access; only the mode is saved.
 
-## Install (Ubuntu, Debian)
+## Install (Ubuntu 24.04 or newer, Debian 13)
 
 ```
-sudo apt install ./JulyBanglaKeyboard-linux-amd64.deb
+sudo apt install ./JulyBanglaKeyboard-linux-amd64.deb     # also installs a Bangla font
 ```
 
 Log out and log in again. Then open Settings → Keyboard → Input Sources → **+** →
