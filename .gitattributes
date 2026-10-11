@@ -9,3 +9,4 @@ gradlew   text eol=lf
 *.jar     binary
 *.woff2   binary
 *.ttf     binary
+linux/debian/*  text eol=lf
