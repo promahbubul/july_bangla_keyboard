@@ -72,8 +72,13 @@ android {
         applicationId = "org.julybangla.keyboard"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.1.0-preview"
+        // One version for every platform: VERSION in the root CMakeLists.txt.
+        val version = Regex("""^\s*VERSION\s+(\d+)\.(\d+)\.(\d+)""", RegexOption.MULTILINE)
+            .find(rootProject.file("../CMakeLists.txt").readText())
+            ?: error("VERSION not found in CMakeLists.txt")
+        val (major, minor, patch) = version.destructured
+        versionCode = major.toInt() * 10000 + minor.toInt() * 100 + patch.toInt()
+        versionName = "$major.$minor.$patch"
 
         ndk {
             // Real phones and tablets only; x86 emulators can be added for local testing.

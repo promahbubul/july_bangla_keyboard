@@ -44,7 +44,7 @@ with Linux next. It has three modes:
 
 ## Status
 
-Version **0.4.1 (preview)**.
+Version **0.4.2 (preview)**.
 
 | Platform | State |
 |---|---|

@@ -4,6 +4,15 @@ All notable changes are listed here. Versions follow [SemVer](https://semver.org
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-10-11
+
+### Added
+- **Android download.** Every release now attaches the signed Android app
+  (`JulyBanglaKeyboard.apk`), so the website's Android button works.
+
+### Changed
+- The Android app uses the same version number as the rest of the project.
+
 ## [0.4.1] - 2026-10-11
 
 ### Changed
