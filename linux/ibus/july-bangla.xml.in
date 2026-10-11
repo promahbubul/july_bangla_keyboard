@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IBus component for July Bangla Keyboard (installed to /usr/share/ibus/component). -->
+<component>
+  <name>org.freedesktop.IBus.JulyBangla</name>
+  <description>July Bangla Keyboard</description>
+  <exec>@JULY_LIBEXEC_DIR@/ibus-engine-july-bangla --ibus</exec>
+  <version>@PROJECT_VERSION@</version>
+  <author>July Bangla Keyboard project</author>
+  <license>MIT</license>
+  <homepage>https://julykeyboard.vercel.app/</homepage>
+  <textdomain>ibus-july-bangla</textdomain>
+  <engines>
+    <engine>
+      <name>july-bangla</name>
+      <language>bn</language>
+      <license>MIT</license>
+      <author>July Bangla Keyboard project</author>
+      <icon>@CMAKE_INSTALL_FULL_DATADIR@/ibus-july-bangla/july-bangla.png</icon>
+      <layout>us</layout>
+      <longname>July Bangla Keyboard</longname>
+      <description>Bangla with the Bijoy-compatible layout. Ctrl+Alt+B: বাংলা / ক্লাসিক / English</description>
+      <symbol>জ</symbol>
+      <rank>80</rank>
+    </engine>
+  </engines>
+</component>

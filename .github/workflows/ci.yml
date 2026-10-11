@@ -40,3 +40,22 @@ jobs:
         with:
           name: july-bangla-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
+
+  linux:
+    name: Linux (IBus engine, tests, .deb)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq libibus-1.0-dev ninja-build
+      - name: Build and test
+        run: |
+          cmake -S linux -B build-linux -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build-linux
+          ctest --test-dir build-linux --output-on-failure
+      - name: Package
+        run: cd build-linux && cpack --config CPackConfig.cmake
+      - uses: actions/upload-artifact@v4
+        with:
+          name: july-bangla-linux-deb
+          path: build-linux/JulyBanglaKeyboard-linux-amd64.deb

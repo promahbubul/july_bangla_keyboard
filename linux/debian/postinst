@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+# Let IBus see the new engine (users still add it in their input sources).
+if command -v ibus >/dev/null 2>&1; then
+    ibus write-cache --system >/dev/null 2>&1 || true
+fi
+exit 0
