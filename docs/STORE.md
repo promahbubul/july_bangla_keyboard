@@ -32,7 +32,7 @@ So the signature is needed for a keyboard in any case, with or without the Store
 
 | # | Item | Status |
 |---|---|---|
-| 1 | Open-source licence (needed for free signing) | ✅ GPL-3.0-or-later |
+| 1 | Open-source licence | ✅ MIT |
 | 2 | Automated release build (`.github/workflows/release.yml`) | ✅ |
 | 3 | Installer and all PE files code-signed | ❌ SignPath Foundation declined on 2026-10-10 (project too new; reapply once it has public adoption). A paid certificate is the alternative |
 | 4 | Silent install tested (`/VERYSILENT /SUPPRESSMSGBOXES /NORESTART`) | ⏳ supported by Inno Setup; not yet run |
@@ -110,7 +110,7 @@ is not affiliated with Bijoy. The SutonnyMJ font is not included.
 - Ctrl+Alt+B switches English, বাংলা and ক্লাসিক
 - Mode bar and tray icon
 - Works offline; collects no data
-- Free and open source (GPL-3.0)
+- Free and open source (MIT)
 
 **Keywords:** Bangla keyboard, Bengali keyboard, Bijoy, Unicode Bangla, SutonnyMJ,
 বাংলা কীবোর্ড, Bangla typing

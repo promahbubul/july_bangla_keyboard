@@ -4,6 +4,14 @@ All notable changes are listed here. Versions follow [SemVer](https://semver.org
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-11
+
+### Changed
+- **Licence: MIT.** The project is now under the MIT License instead of the GPL, so anyone
+  may use, copy, modify and distribute it freely. The installer ships the new
+  `LICENSE.txt`.
+- The website and README state plainly that releases are not code-signed yet.
+
 ## [0.4.0] - 2026-10-10
 
 ### Licence

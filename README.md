@@ -44,7 +44,7 @@ with Linux next. It has three modes:
 
 ## Status
 
-Version **0.4.0 (preview)**.
+Version **0.4.1 (preview)**.
 
 | Platform | State |
 |---|---|
@@ -118,9 +118,9 @@ roles, approval and privacy are described in the
 
 Copyright © 2026 Mahbubul Alam.
 
-July Bangla Keyboard is free software: you can redistribute it and/or modify it under the
-terms of the **GNU General Public License, version 3 or (at your option) any later
-version**. It is distributed without any warranty. See [LICENSE](LICENSE).
+July Bangla Keyboard is free and open source under the **MIT License**: anyone may use,
+copy, modify and distribute it, free of charge. It comes without any warranty. See
+[LICENSE](LICENSE).
 
 `layouts/sutonnymj.classic` is under MPL-2.0. The website font Hind Siliguri is under the
 SIL OFL 1.1. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
