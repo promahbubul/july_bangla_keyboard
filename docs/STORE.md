@@ -34,7 +34,7 @@ So the signature is needed for a keyboard in any case, with or without the Store
 |---|---|---|
 | 1 | Open-source licence (needed for free signing) | ✅ GPL-3.0-or-later |
 | 2 | Automated release build (`.github/workflows/release.yml`) | ✅ |
-| 3 | Installer and all PE files code-signed | ⏳ applied to SignPath Foundation on 2026-10-10; waiting for their answer |
+| 3 | Installer and all PE files code-signed | ❌ SignPath Foundation declined on 2026-10-10 (project too new; reapply once it has public adoption). A paid certificate is the alternative |
 | 4 | Silent install tested (`/VERYSILENT /SUPPRESSMSGBOXES /NORESTART`) | ⏳ supported by Inno Setup; not yet run |
 | 5 | Offline, standalone installer | ✅ |
 | 6 | Versioned HTTPS download URL that never changes | ✅ `…/releases/download/v<version>/JulyBanglaKeyboard-Setup.exe` |

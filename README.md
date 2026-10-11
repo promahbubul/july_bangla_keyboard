@@ -109,10 +109,9 @@ Bug reports and ideas are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and t
 
 ## Code signing policy
 
-Releases are built from this repository by GitHub Actions. We have applied for free code
-signing provided by [SignPath.io](https://signpath.io), with a certificate by
-[SignPath Foundation](https://signpath.org). Until that is approved, releases are not
-code-signed. Team roles, approval and privacy are described in the
+Releases are built from this repository by GitHub Actions. They are **not code-signed
+yet**; verify downloads with the `SHA256SUMS.txt` file attached to each release. Team
+roles, approval and privacy are described in the
 [code signing policy](https://julykeyboard.vercel.app/code-signing.html).
 
 ## License
